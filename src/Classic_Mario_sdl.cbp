@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Classic_Mario_sdl" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Classic_Mario_sdl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Classic_Mario_sdl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add option="-lSDL2" />
+			<Add option="-lSDL2_ttf" />
+			<Add option="-lSDL2_image" />
+		</Linker>
+		<Unit filename="Classic_Mario_Sdl/JeuS.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Classic_Mario_Sdl/JeuS.h" />
+		<Unit filename="Classic_Mario_Sdl/MarioSdl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Classic_Mario_Sdl/MarioSdl.h" />
+		<Unit filename="Classic_Mario_Sdl/MonsterSdl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Classic_Mario_Sdl/MonsterSdl.h" />
+		<Unit filename="Classic_Mario_Sdl/NiveauSdl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Classic_Mario_Sdl/NiveauSdl.h" />
+		<Unit filename="Classic_Mario_Sdl/PositionSdl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Classic_Mario_Sdl/PositionSdl.h" />
+		<Unit filename="Classic_Mario_Sdl/defs.h" />
+		<Unit filename="Classic_Mario_Sdl/mainSdl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Classic_Mario_Sdl/sdlJeu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Classic_Mario_Sdl/sdlJeu.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

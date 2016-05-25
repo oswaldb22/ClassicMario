@@ -1,0 +1,102 @@
+# depslib dependency file v1.0
+1464055861 source:/home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/JeuS.c
+	"JeuS.h"
+
+1464055878 /home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/JeuS.h
+	"MarioSdl.h"
+	"MonsterSdl.h"
+	"NiveauSdl.h"
+	"defs.h"
+
+1464055867 /home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/MarioSdl.h
+	"defs.h"
+	"PositionSdl.h"
+	"NiveauSdl.h"
+
+1464006971 /home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/defs.h
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<SDL2/SDL.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_image.h>
+
+1464038707 /home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/PositionSdl.h
+
+1464006971 /home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/NiveauSdl.h
+	"defs.h"
+
+1464055873 /home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/MonsterSdl.h
+	"defs.h"
+	"PositionSdl.h"
+	"NiveauSdl.h"
+
+1464038707 source:/home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/mainSdl.c
+	<stdio.h>
+	"sdlJeu.h"
+
+1464054593 /home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/sdlJeu.h
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	"SDL2/SDL_audio.h"
+	"SDL2/SDL_mixer.h"
+	"Jeu.h"
+	"defs.h"
+
+1464047485 /home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/JeuSdl.h
+	"MarioSdl.h"
+	"MonsterSdl.h"
+	"NiveauSdl.h"
+
+1464053591 source:/home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/MarioSdl.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	"MarioSdl.h"
+
+1464053845 source:/home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/MonsterSdl.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	"MonsterSdl.h"
+
+1464055918 source:/home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/NiveauSdl.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	"NiveauSdl.h"
+
+1464038707 source:/home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/PositionSdl.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	"PositionSdl.h"
+
+1464054770 source:/home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/sdlJeu.c
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	"sdlJeu.h"
+
+1464054545 /home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/Jeu.h
+	"MarioSdl.h"
+	"MonsterSdl.h"
+	"Niveau.h"
+	"defs.h"
+
+1464006971 /home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/Niveau.h
+	"defs.h"
+
+1464053744 source:/home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/Jeu.c
+	"Jeu.h"
+
+1464038707 source:/home/oswald/Bureau/CLASSIC_MARIO_BLASSOU_OSWALD_MAMADOU_SOW/src/Classic_Mario_Sdl/Niveau.c
+	<assert.h>
+	<stdio.h>
+	<stdlib.h>
+	"Niveau.h"
+
