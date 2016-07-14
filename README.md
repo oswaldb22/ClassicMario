@@ -9,7 +9,7 @@ Classic Mario C/SDL2
 		**********************
 		* Comment compiler ? *
 		**********************
-		Vous devez d'abord installer(ou télecharger) Ncurses, SDL, SDL_image, SDL_ttf, SDL_mixer
+		Vous devez d'abord installer(ou télecharger) Ncurses,  SDL, SDL_image, SDL_ttf, SDL_mixer
 		que vous soyer sur Linux ou Windows. 
 		Ensuite si vous êtes sur Windows copiez le chemin d'accés au librairies SDL et Ncurses que 
 		vous aurez télechargé dans le makefile réspectivement aux lignes 26 et 32 apres le LIBS = 
@@ -46,19 +46,6 @@ Classic Mario C/SDL2
 		
 		
 
-
-
-						******************************
-						* TESTREG: Test de regression*
-						******************************
-	    Si vous voulez effectuer un test de regressions sur les fonctions utilisés par le jeu vous devez:
-	     	
-		./Classic_Mario_txt_test 
-		Pour executer le programmes
-		En rentrant dans le dossier bin/Debug: 
-		$ cd bin && ./Classic_Mario_txt_test   
-		
-
         	*****************************
 		* Quel est le but du jeu  ? *
 		*****************************
@@ -75,8 +62,3 @@ Classic Mario C/SDL2
 		explications concernant les fonctions qu'on utilise, ce qu'elles font et quels parametres
 		prennent elles. Vous trouverez aussi les informations concernant tous les fichier qu'on 
 		a utilisé ainsi que les structures qu'on a utilisés. 
-
-		**************************
-		*Projet realiser par *
-		**************************
-
