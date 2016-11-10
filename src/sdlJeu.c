@@ -572,21 +572,6 @@ void sdljeuAff(sdlJeu* sj)
     image_draw( &sj->imMonster, sj->renderer, (posGetX(&mons->posMonster))*TAILLE_SPRITE-sj->xscroll,  posGetY(&mons->posMonster)*TAILLE_SPRITE-sj->yscroll, TAILLE_SPRITE, TAILLE_SPRITE);
 
     /* Copie le temps sur l'ecran*/
-
-   /* SDL_Color couleurNoire = {0, 0, 0};
-    SDL_Color couleurBlanche = {255, 255, 255};
-    int compteur = sj->time/100;
-    char temps[500] ="";
-    sprintf(temps, "Temps : %d      Vie : %d        Score : %d", compteur,mar->life,mar->timerMort);
-    //ECRITURE
-    SDL_Surface *texte;
-    texte = TTF_RenderText_Blended(sj->font, temps, couleurBlanche);
-    sj->texture=NULL;
-    sj->texture=SDL_CreateTextureFromSurface( sj->renderer, texte);
-    SDL_FreeSurface(texte);
-    text_draw(sj->texture,sj->renderer,2*32,0.25*32,32*20,32);*/
-
-
 }
 
 void sdljeuBoucle(sdlJeu* sj)
@@ -611,8 +596,7 @@ void sdljeuBoucle(sdlJeu* sj)
             t = nt;
 
         }
-          /* jeuVerificationPosition(jeu);*/
-
+        
 		/* tant qu'il y a des evenements à traiter (cette boucle n'est pas bloquante)*/
 		while ( SDL_PollEvent( &events ) )
 		{
@@ -760,7 +744,7 @@ void sdlMenu(sdlJeu *sj)
                                  default: break;
                             }
 
-
+			default:break;
                     }
             }
 
