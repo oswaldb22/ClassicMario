@@ -6,8 +6,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-#include "SDL2/SDL_audio.h"
-#include "SDL2/SDL_mixer.h"
+//#include "SDL2/SDL_audio.h"
+//#include "SDL2/SDL_mixer.h"
 
 #include "JeuS.h"
 #include "defs.h"
