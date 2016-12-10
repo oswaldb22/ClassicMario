@@ -1,5 +1,5 @@
 #LIF7_ClassicMario
-[![N|Solid](https://oswaldb22.github.io/images/logoRond.png)](https://oswaldb22.github.io)
+[![Oswalb22](https://oswaldb22.github.io/images/logoRond.png)](https://oswaldb22.github.io)
 
 A little Mario-Like
 
