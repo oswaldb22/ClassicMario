@@ -14,9 +14,9 @@
 
 typedef struct
 {
-    SDL_Surface* surface;
-    SDL_Texture* texture;
-    int has_changed;
+	SDL_Surface* surface;
+	SDL_Texture* texture;
+	int has_changed;
 }Image;
 
 
@@ -24,32 +24,32 @@ typedef struct
 {
 	Jeu jeu;
 
-    SDL_Window* window;
-    SDL_Renderer *renderer;
-    TTF_Font *font;
+	SDL_Window* window;
+	SDL_Renderer *renderer;
+	TTF_Font *font;
 
-    int xscroll,yscroll;
-    int largeur_fenetre,hauteur_fenetre;
+	int xscroll,yscroll;
+	int largeur_fenetre,hauteur_fenetre;
 
-    int time;
-    SDL_Texture *texture;
+	int time;
+	SDL_Texture *texture;
 
 
-/*----------------------------MARIO & MONSTER ------------------------*/
-    Image imMarioG[2];
-    Image imMarioD[2];
+	/*----------------------------MARIO & MONSTER ------------------------*/
+	Image imMarioG[2];
+	Image imMarioD[2];
 
-    Image imMonster;
+	Image imMonster;
 
-/*----------------------------MAP---------------------------------------*/
-    Image imSol;
-    Image imBrick;
-    Image imPointI;
-    Image imBrickUsed;
-    Image imBrickRed;
-    Image imBrickGrey;
-/*----------------------------MENU------------------------------*/
-    Image menu[3];
+	/*----------------------------MAP---------------------------------------*/
+	Image imSol;
+	Image imBrick;
+	Image imPointI;
+	Image imBrickUsed;
+	Image imBrickRed;
+	Image imBrickGrey;
+	/*----------------------------MENU------------------------------*/
+	Image menu[3];
 
 
 }sdlJeu;
