@@ -1,5 +1,5 @@
 #LIF7_ClassicMario
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://oswaldb22.github.io)
+[![N|Solid](https://oswaldb22.github.io/images/logoRond.png)](https://oswaldb22.github.io)
 
 A little Mario-Like
 
@@ -14,15 +14,15 @@ $ cd LIF7_ClassicMario
 $ make
 ```
 
-###Run the game
+###Run the program
 
-After the build you can run the game :
+After the build you can run the program :
 
 ```sh
 $ ./bin/main
 ```
 
-###Removing useless files after
+###Removing useless files
 
 ```sh
 $ make clean
