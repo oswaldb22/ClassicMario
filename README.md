@@ -1,13 +1,11 @@
 #LIF7_ClassicMario
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://oswaldb22.github.io)
 
-A little Mario-Like
+A little ####Mario-Like
 
 ### How to Build
 
 This program requires SDL2, SDL2_image, SDL2_ttf, SDL2_mixer library
-
-After the install of all SDL2 library
 
 
 ```sh
@@ -32,4 +30,4 @@ $ make remove
 ```
 
 
-####Free Software
+####Free Software :)
