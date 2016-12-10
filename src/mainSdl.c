@@ -5,13 +5,10 @@
 int main ( int argc, char** argv )
 {
     sdlJeu *sj=NULL;
-	sj=malloc(sizeof(sdlJeu));
-    printf("debut\n");
+	sj=malloc(sizeof(sdlJeu));     	
 	sdljeuInit( sj );
 	sdlMenu(sj);
 	/*sdljeuBoucle(&sj);*/
 	sdljeuDetruit(sj);
-
-	printf("Fin\n");
 	return 0;
 }

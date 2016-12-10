@@ -596,7 +596,7 @@ void sdljeuBoucle(sdlJeu* sj)
             t = nt;
 
         }
-        
+
 		/* tant qu'il y a des evenements à traiter (cette boucle n'est pas bloquante)*/
 		while ( SDL_PollEvent( &events ) )
 		{
@@ -754,6 +754,16 @@ void sdlMenu(sdlJeu *sj)
     }
 }
 
+void ImageFree(Image im){
+  SDL_FreeSurface(im.surface);
+  SDL_DestroyTexture(im.texture);
+}
+void ImageFreeTab(Image im[],int size){
+    for(int i=0;i<size;i++){
+        ImageFree(im[i]);
+      }
+}
+
 void sdljeuDetruit( sdlJeu *sj)
 {
 
@@ -761,10 +771,27 @@ void sdljeuDetruit( sdlJeu *sj)
     TTF_Quit();
     SDL_DestroyRenderer( sj->renderer );
     SDL_DestroyWindow( sj->window);
-
     SDL_Quit();
 
+    /*FREE ALL Image*/
 
+
+    /*----------------------------MARIO & MONSTER ------------------------*/
+
+        ImageFreeTab(sj->imMarioG,2);
+        ImageFreeTab(sj->imMarioD,2);
+
+        ImageFree(sj->imMonster);
+
+    /*----------------------------MAP---------------------------------------*/
+        ImageFree(sj->imSol);
+        ImageFree(sj->imBrick);
+        ImageFree(sj->imPointI);
+        ImageFree(sj->imBrickUsed);
+        ImageFree(sj->imBrickRed);
+        ImageFree(sj->imBrickGrey);
+    /*----------------------------MENU-------------------------------------*/
+        ImageFreeTab(sj->menu,3);
+
+        free(sj);
 }
-
-

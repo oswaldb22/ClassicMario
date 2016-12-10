@@ -72,5 +72,7 @@ void image_draw(Image *im, SDL_Renderer * renderer, int x, int y, int w, int h);
 
 void text_draw(SDL_Texture *texture, SDL_Renderer * renderer,int x,int y, int w, int h);
 
+void ImageFree(Image im);
+void ImageFreeTab(Image im[],int size);
 
 #endif
