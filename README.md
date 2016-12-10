@@ -5,12 +5,16 @@ A little Mario-Like
 
 ### How to Build
 
-You will need SDL, SDL_image, SDL_ttf, SDL_mixer library
+This program requires SDL2, SDL2_image, SDL2_ttf, SDL2_mixer library
+
+After the install of all SDL2 library
+
 
 ```sh
 $ cd LIF7_ClassicMario
 $ make
 ```
+
 
 ###Run the game
 
