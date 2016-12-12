@@ -10,7 +10,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_image.h>
-
+#include <SDL2/SDL_mixer.h>
 /*---------------SCROLLING-------------------*/
 
 /*Represente les dimensions de la fenetre en fonction du terrain*/

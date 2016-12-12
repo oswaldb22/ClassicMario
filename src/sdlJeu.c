@@ -429,6 +429,15 @@ void sdljeuInit(sdlJeu* sj)
 	/*-------Use this function to create a 2D rendering context for a window.----*/
 	sj->renderer = SDL_CreateRenderer( sj->window, -1, SDL_RENDERER_ACCELERATED);
 
+	/*-------Initialisation of audio library.----*/
+	if(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 1024) == -1) //Initialisation de l'API Mixer
+ {
+		printf("%s", Mix_GetError());
+ }
+ Mix_Music *musique; //Création du pointeur de type Mix_Music
+ musique = Mix_LoadMUS("./data/Music/overworld.wav"); //Chargement de la musique
+ Mix_PlayMusic(musique, -1); //Jouer infiniment la musique
+
 	/* Chargement des Images */
 
 	sj->imMonster= image("data/Image/fantome.png", sj->renderer);
@@ -753,6 +762,8 @@ void ImageFreeTab(Image im[],int size){
 
 void sdljeuDetruit( sdlJeu *sj)
 {
+//	Mix_FreeMusic(musique); //Libération de la musique
+   Mix_CloseAudio(); //Fermeture de l'API
 
 	TTF_CloseFont( sj->font);
 	TTF_Quit();
