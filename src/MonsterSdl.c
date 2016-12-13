@@ -98,10 +98,11 @@ void monsBougeAutoSdl(MonsterSdl *s, const Niveau *n)
         {
             /*Deplacement a Droite*/
             deplace = monsDroiteSdl(s, n);
-
+            s->x++;
             /*Deplacement a Gauche*/
             if(deplace==0)
             {
+                s->x--;
                 monsGaucheSdl(s,n);
             }
         }
@@ -112,10 +113,11 @@ void monsBougeAutoSdl(MonsterSdl *s, const Niveau *n)
         {
             /*Deplacement a Gauche */
             deplace = monsGaucheSdl(s, n);
-
+            s->x++;
             /*Deplacement a Droite*/
             if(deplace == 0)
             {
+                s->x--;
                 monsDroiteSdl(s, n);
             }
 

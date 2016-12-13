@@ -577,7 +577,7 @@ void sdljeuAff(sdlJeu* sj)
 	}
 
 	/* Copie le sprite de Monster sur l'ecran*/
-	image_draw( &sj->imMonster, sj->renderer, (posGetX(&mons->posMonster))*TAILLE_SPRITE-sj->xscroll,  posGetY(&mons->posMonster)*TAILLE_SPRITE-sj->yscroll, TAILLE_SPRITE, TAILLE_SPRITE);
+	image_draw( &sj->imMonster, sj->renderer, mons->x-sj->xscroll,  mons->y-sj->yscroll, TAILLE_SPRITE, TAILLE_SPRITE);
 }
 
 void sdljeuBoucle(sdlJeu* sj)
@@ -760,8 +760,7 @@ void ImageFreeTab(Image im[],int size){
 	}
 }
 
-void sdljeuDetruit( sdlJeu *sj)
-{
+void sdljeuDetruit( sdlJeu *sj){
 //	Mix_FreeMusic(musique); //Libération de la musique
    Mix_CloseAudio(); //Fermeture de l'API
 

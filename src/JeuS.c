@@ -24,6 +24,11 @@ void jeuInit(Jeu *j,const char *filename){
 	mar->timerMort=0;
 	mar->life=3;
 	mar->animFrame=0;
+
+	MonsterSdl *mons =jeuGetMonsterSdl(j);
+	mons->x=10*TAILLE_SPRITE;
+	mons->y=12*TAILLE_SPRITE;
+
 	nivInit(&j->niv,filename);
 
 }
@@ -87,4 +92,3 @@ void jeuActionClavier(Jeu *j, const char touche){
 			break;
 	}
 }
-
