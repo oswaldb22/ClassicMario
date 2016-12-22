@@ -41,7 +41,7 @@ int monsGetDirectionSdl(const MonsterSdl *s){
 
 
 int monsDroiteSdl(MonsterSdl *s, const Niveau *n){
-
+      (void)n;
      /*int positionXactuel=posGetX(&s->posMonster);
     int positionYactuel=posGetY(&s->posMonster);
     if(nivEstPositionPersoValide(n,positionXactuel+1,positionYactuel)==1){

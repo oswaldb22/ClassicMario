@@ -33,8 +33,12 @@ void nivInit(Niveau *n, const char filename[]){
     {
 		char* ligneFichier=NULL;
 		size_t sz=0;
-	    getline(&ligneFichier, &sz, f);
-        for (i = 0 ; i <n->dimX  ; i++)
+	  int l =  getline(&ligneFichier, &sz, f);
+		if(l==-1){
+			printf("Error with getting line on file\n");
+		}
+		else{
+				for (i = 0 ; i <n->dimX  ; i++)
         {
             switch (ligneFichier[i])
             {
@@ -74,7 +78,7 @@ void nivInit(Niveau *n, const char filename[]){
 
             }
         }
-		printf("\n");
+		}
 		free(ligneFichier);
     }
 
@@ -168,11 +172,3 @@ void nivTestRegression(){
     printf("\nivGetXY --> OK\n");
     */
 }
-
-
-
-
-
-
-
-

@@ -33,18 +33,6 @@ void jeuInit(Jeu *j,const char *filename){
 
 }
 
-/*void jeuVerificationPosition(Jeu *j){
-  PositionSdl posMario=marGetPosition(&j->mar);
-  PositionSdl posMons=monsGetPosition(&j->mons);
-  PositionSdl pos;
-  posSetX(&pos,2);
-  posSetY(&pos,2);
-
-  if (posGetX(&posMario)==posGetX(&posMons)&&posGetY(&posMario)==posGetY(&posMons)){
-  marSetPosition(&j->mar,&pos);
-  }
-  }*/
-
 const MarioSdl* jeuGetConstMarioSdl(const Jeu *j){
 	return &j->mar;
 }
@@ -53,12 +41,9 @@ MarioSdl* jeuGetMarioSdl( Jeu *j){
 	return &j->mar;
 }
 
-
-
-
-const MonsterSdl* jeuGetConstMonster(const Jeu *j){
+/*const MonsterSdl* jeuGetConstMonster(const Jeu *j){
 	return &j->mons;
-}
+}*/
 
 MonsterSdl* jeuGetMonsterSdl( Jeu *j){
 	return &j->mons;

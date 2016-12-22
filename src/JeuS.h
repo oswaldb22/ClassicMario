@@ -53,7 +53,7 @@ MarioSdl* jeuGetMarioSdl( Jeu *j);
 @param[in, out] j pointeur sur Jeu.
 @return pointeur sur Monster.
 */
-const MonsterSdl jeuGetConstMonsterSdl(const Jeu *j);
+const MonsterSdl* jeuGetConstMonsterSdl(const Jeu *j);
 
 /**
 @brief retourne un poiteur sur Niveau du jeux.

@@ -42,6 +42,9 @@ int marGetDirection(const MarioSdl *m){
 
 
 void marDroite(MarioSdl *mar, const Niveau *n){
+        //NO NEED n
+        (void)n;
+
 
         float dy;
         posAddDy(&mar->posMario,-0.5);
@@ -66,7 +69,7 @@ void marDroite(MarioSdl *mar, const Niveau *n){
 
 
 void marGauche(MarioSdl *mar, const Niveau *n){
-
+        (void)n;
 
 
         float dx;
@@ -94,7 +97,7 @@ void marGauche(MarioSdl *mar, const Niveau *n){
 }
 
 void marSaut(MarioSdl *mar, const Niveau *n){
-
+    (void)n;
 
     if(mar->onGround==1){
                         posAddDy(&mar->posMario,-JUMP_HEIGHT);
@@ -109,9 +112,3 @@ void marSaut(MarioSdl *mar, const Niveau *n){
                     }
 
 }
-
-
-
-
-
-
