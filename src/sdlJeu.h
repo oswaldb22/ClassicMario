@@ -48,8 +48,12 @@ typedef struct
 	Image imBrickUsed;
 	Image imBrickRed;
 	Image imBrickGrey;
-	/*----------------------------MENU------------------------------*/
+
 	Image menu[3];
+
+/*----------------------------MUSIQUE------------------------------*/
+ Mix_Music *musique; //Création du pointeur de type Mix_Music
+
 
 
 }sdlJeu;

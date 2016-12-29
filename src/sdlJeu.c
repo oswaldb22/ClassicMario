@@ -434,9 +434,9 @@ void sdljeuInit(sdlJeu* sj)
  {
 		printf("%s", Mix_GetError());
  }
- Mix_Music *musique; //Création du pointeur de type Mix_Music
- musique = Mix_LoadMUS("./data/Music/overworld.wav"); //Chargement de la musique
- Mix_PlayMusic(musique, -1); //Jouer infiniment la musique
+
+ sj->musique = Mix_LoadMUS("./data/Music/overworld.wav"); //Chargement de la musique
+ Mix_PlayMusic(sj->musique, -1); //Jouer infiniment la musique
 
 	/* Chargement des Images */
 
@@ -594,7 +594,7 @@ void sdljeuBoucle(sdlJeu* sj)
 	{
 		/*FONCTION DE VERIFICATION DU DYNAMISME DE MARIO*/
 		nt = SDL_GetTicks();
-		if (nt-t>20)    /* 50 img / s*/
+		if (nt-t>16)    /* 50 img / s*/
 		{
 			jeuActionsAutomatiques(jeu);
 			updateplayer(sj);
@@ -615,6 +615,7 @@ void sdljeuBoucle(sdlJeu* sj)
 						break;
 
 					case SDL_SCANCODE_ESCAPE:
+						Mix_PauseMusic();
 						quit = 1;
 					case SDL_SCANCODE_Q:
 						quit = 1;
@@ -731,6 +732,7 @@ void sdlMenu(sdlJeu *sj)
 						switch(i)
 						{
 							case 1:
+								Mix_ResumeMusic();
 								sdljeuBoucle( sj);
 								break;
 							case 2:
@@ -782,5 +784,10 @@ void sdljeuDetruit( sdlJeu *sj){
 	ImageFree(sj->imBrickGrey);
 	/*----------------------------MENU-------------------------------------*/
 	ImageFreeTab(sj->menu,3);
+
+	/*----------------------------MUSIQUE----------------------------------*/
+	Mix_FreeMusic(sj->musique);
+	Mix_CloseAudio();
+
 	free(sj);
 }

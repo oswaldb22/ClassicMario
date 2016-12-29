@@ -26,6 +26,10 @@ typedef struct {
     char ter[300][300];
     int nbMonster;
 
+    /*IMAGE OF THE LEVEL*/
+    int xscroll,yscroll;
+  	int largeur_fenetre,hauteur_fenetre;
+
 }Niveau;
 
 /**
@@ -120,5 +124,3 @@ int nivEstNonMur(Niveau * n,float x, float y);
 char nivGetXYF(const Niveau * n, float x, float y);
 
 #endif
-
-

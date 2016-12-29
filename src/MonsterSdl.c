@@ -1,8 +1,3 @@
-/**
-@file MonsterSdl.c
-@brief Fichier d'implémentation du module MarioSdl .
- */
-
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -38,7 +33,6 @@ int monsGetDirectionSdl(const MonsterSdl *s){
 
     return s->iDirection;
 }
-
 
 int monsDroiteSdl(MonsterSdl *s, const Niveau *n){
       (void)n;

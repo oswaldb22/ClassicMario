@@ -87,6 +87,13 @@ void nivInit(Niveau *n, const char filename[]){
 		for(y=0;y<n->dimY;++y)
 			n->ter[x][y] = tb[n->dimY-1-y][x];
     fclose(f);
+
+/*-----------------------SCROLLING-------------------------------*/
+			n->largeur_fenetre=LARGEUR_FENETRE;
+			n->hauteur_fenetre=HAUTEUR_FENETRE;
+
+			n->xscroll=0*TAILLE_SPRITE;
+			n->yscroll=0*TAILLE_SPRITE;
 }
 
 
@@ -141,34 +148,4 @@ void nivSetDimY(Niveau *n, const int dimY){
     assert(dimY>=0);
 
     n->dimY=dimY;
-}
-
-
-
-void nivTestRegression(){
-
-    /*Niveau n;
-    printf("\n********  TEST MODULE NIVEAU **********\n");
-    printf("\nInitialisation de Niveau avec la fonction nivInit \n Initialise niveau  a une dimension 2D:(20,11) direction:1");
-    nivInit(&n);
-    assert((n.dimX>=0) && (n.dimY>=0) && (n.nbMonster>=1) && (n.ter!=NULL));
-    printf("\nInitialisation --> OK\n");
-    assert((n.dimX==21) && (n.dimY==12) && (n.nbMonster==1) && (n.ter!=NULL));
-    printf("\n Verifions les accesseurs que les champs idirection=1 et de position sont egales à (0,0) \n");
-    assert((nivGetDimX(&n)==21) && (nivGetDimY(&n)==12) && (niVGetNbMonster(&n)==1));
-    printf("\nAffichage des Dimensiondu niveau avec les accesseurs (dimX,dimY) et nbMonster: \n");
-    printf("dimX est égale à  : %d\n",nivGetDimX(&n));
-    printf("dimY est égale à  : %d\n",nivGetDimY(&n));
-    printf("nbMonster est égale à  : %d\n",niVGetNbMonster(&n));
-    printf("\nAccesseurs --> OK\n");
-    printf("\n Verifions La fonction nivGetXY qui renvoie un caractere à la position (x,y)=(5,3)->'#' et (5,5)->'.'\n");
-    assert((nivGetXY(&n,5,3)=='#') && (nivGetXY(&n,5,5)=='.'));
-    printf("\nAffichage des caracteres obtenus: \n");
-    printf("Pour (x,y)=(5,3) le caractère est: %c\n",nivGetXY(&n,5,3));
-    printf("Pour (x,y)=(5,5) le caractère est: %c\n",nivGetXY(&n,5,5));
-
-
-
-    printf("\nivGetXY --> OK\n");
-    */
 }
