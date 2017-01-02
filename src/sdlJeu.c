@@ -145,7 +145,6 @@ void analyseCollision(sdlJeu *sj){
 	/*Etudie les renvoies de la fonction CollisionDecor
 	  En fonction de chaque nombre renvoyer on etudie les collisions et on influe sur
 	  dx et dy !
-
 	  .Utilisez la variable OnGround ou la variable Onledge, le test de collision ou la
 	  graviter sera faite tant que OnGround ou OnLedge = 0*/
 	MarioSdl *mar =jeuGetMarioSdl(&sj->jeu);
@@ -340,14 +339,23 @@ void image_draw(Image *im, SDL_Renderer * renderer, int x, int y, int w, int h){
 
 /*----------------------Dessine les texte----------------------------------*/
 
-void text_draw(SDL_Texture *texture, SDL_Renderer * renderer,int x,int y, int w, int h){
-	SDL_Rect r;
-	r.x = x;
-	r.y = y;
-	r.w = w;
-	r.h = h;
+void text_draw1(sdlJeu *sj, SDL_Renderer * renderer,int x,int y, int w, int h){
 
-	SDL_RenderCopy(renderer,texture,NULL,&r);
+	SDL_Color White;
+	White.r=255;
+	White.g=255;
+	White.b =255;
+	SDL_Surface* surfaceMessage = TTF_RenderText_Solid(sj->font, "Life 10    Score 10   Time ", White); // as TTF_RenderText_Solid could only be used on SDL_Surface then you have to create the surface first
+
+	SDL_Texture* Message = SDL_CreateTextureFromSurface(renderer, surfaceMessage); //now you can convert it into a texture
+
+	SDL_Rect Message_rect; //create a rect
+	Message_rect.x =x;  //controls the rect's x coordinate
+	Message_rect.y = y; // controls the rect's y coordinte
+	Message_rect.w = w; // controls the width of the rect
+	Message_rect.h = h; // controls the height of the rect
+
+	SDL_RenderCopy(sj->renderer, Message, NULL, &Message_rect); //you put the renderer's name first, the Message, the crop size(you can ignore this if you don't want to dabble with cropping), and the rect which is the size and coordinate of your texture
 }
 
 void sdljeuInit(sdlJeu* sj)
@@ -578,6 +586,10 @@ void sdljeuAff(sdlJeu* sj)
 
 	/* Copie le sprite de Monster sur l'ecran*/
 	image_draw( &sj->imMonster, sj->renderer, mons->x-sj->xscroll,  mons->y-sj->yscroll, TAILLE_SPRITE, TAILLE_SPRITE);
+
+	/*Affichage du texte*/
+//	text_draw1(sj,sj->renderer,8*TAILLE_SPRITE,2*TAILLE_SPRITE, 10*TAILLE_SPRITE, 10*TAILLE_SPRITE);
+
 }
 
 void sdljeuBoucle(sdlJeu* sj)

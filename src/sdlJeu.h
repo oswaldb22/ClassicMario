@@ -1,4 +1,3 @@
-
 #ifndef _SDLJEU_H
 #define _SDLJEU_H
 
@@ -75,6 +74,7 @@ float temps();
 void image_draw(Image *im, SDL_Renderer * renderer, int x, int y, int w, int h);
 
 void text_draw(SDL_Texture *texture, SDL_Renderer * renderer,int x,int y, int w, int h);
+void text_draw1(sdlJeu *sj, SDL_Renderer * renderer,int x,int y, int w, int h);
 
 void ImageFree(Image im);
 void ImageFreeTab(Image im[],int size);
