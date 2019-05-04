@@ -1,20 +1,22 @@
-#LIF7_ClassicMario
-[![Oswalb22](https://oswaldb22.github.io/images/logoRond.png)](https://oswaldb22.github.io)
 
-A little Mario-Like
+# ClassicMario
+
+A little Mario-Like written in C. This was a school project to improve skills in development.
+
+
 
 ### How to Build
 
-This program requires SDL2, SDL2_image, SDL2_ttf, SDL2_mixer library
+This program requires [SDL2, SDL2_image, SDL2_ttf, SDL2_mixer](https://www.libsdl.org/index.php)  libraries.
 
 Then after, you can compile the program.
 
 ```sh
-$ cd LIF7_ClassicMario
+$ cd ClassicMario
 $ make
 ```
 
-###Run the program
+### Run the program
 
 After the build you can run the program :
 
@@ -22,12 +24,9 @@ After the build you can run the program :
 $ ./bin/main
 ```
 
-###Removing useless files
+### Clean
 
 ```sh
 $ make clean
 $ make remove	 
 ```
-
-
-####Free Software :)
